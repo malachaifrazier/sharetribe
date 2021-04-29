@@ -1,0 +1,24 @@
+version: 2
+updates:
+- package-ecosystem: bundler
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "10:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: excon
+    versions:
+    - 0.78.1
+    - 0.79.0
+    - 0.80.1
+  - dependency-name: unicorn
+    versions:
+    - 5.7.0
+    - 5.8.0
+  - dependency-name: delayed_job_active_record
+    versions:
+    - 4.1.5
+  - dependency-name: paperclip
+    versions:
+    - 4.3.7
